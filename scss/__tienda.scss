@@ -1,0 +1,86 @@
+.tienda{
+    position: relative;
+    background-color: white;
+    box-shadow: 6px 5px 605px rgb(0, 0, 0);
+    padding-bottom: 50px;
+    .tienda-title{
+        border-bottom: 4px solid black;
+        padding: 15px;
+        margin-top: 50px;
+    }
+    .product-container{
+        position: relative;
+        height: auto;
+        width: 320px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.095);
+        box-shadow: 10px 5px 35px rgba(0, 0, 0, 0.363);
+        transition: 0.4s;
+        .product-image{
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+        .product-image:hover{
+            transform: scaleX(30px);
+        }
+        .product-price{
+            font-size: 40px;
+            font-weight: 500;
+        }
+        .product-name{
+            font-size: 18x;
+            font-weight: 500;
+        }
+        .product-star{
+            color: rgba(0, 0, 0, 0.231);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .product-star:hover{
+            color: gold;
+        }
+        .card-button{
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            transition: 0.5s;
+        }
+        .card-button:hover{
+            background-color: #0a2159;
+        }
+    }
+}
+
+.product-image:hover::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.302);
+    transition: 0.5s ease-in-out;
+    
+}
+.product-container::before{
+    content: 'Nuevo';
+    position: absolute;
+    background-color: #0a2159;
+    color: white;
+    border-radius: 2px;
+    padding: 10px 30px;
+    top: 0;
+    right: 0;
+    transform: translateY(-20px);
+    z-index: 10;
+}
+
+.product-container:hover{
+    box-shadow: 10px 5px 35px rgba(0, 0, 0, 0.539);
+}

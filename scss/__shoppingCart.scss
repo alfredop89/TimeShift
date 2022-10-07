@@ -1,0 +1,69 @@
+.shopping-modal{
+    position: relative;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.99);
+    z-index: 30;
+    transition: 0.8s;
+    transform: translateX(3000px);
+    .shopping-close-button{
+        position: absolute;
+        color: white;
+        font-size: 35px;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        cursor: pointer;
+    }
+    .cart-container{
+        background-color: white;
+        color: black;
+        border-radius: 4px;
+    }
+    .cart-product-container{
+        box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.243);
+        border: 2px solid rgba(0, 0, 0, 0.097);
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        .cart-product-img{
+            height: 40px !important;
+            width: 40px !important;
+        }
+    }
+    .empty-text{
+        margin: 40px;
+        font-weight: 300;
+        
+    }
+    .comprar-button{
+        background-color: #000000;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .comprar-visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .borrar-todo{
+        cursor: pointer;
+    }
+    .cart-close-product{
+        font-size: 30px;
+        color: rgba(0, 0, 0, 0.301);
+        margin-left: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .cart-close-product:hover{
+        color: red;
+    }
+}

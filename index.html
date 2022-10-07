@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>TimeShift</title>
+</head>
+<body>
+
+<!-- HEADER -->
+
+    <header id="header" class="p-4 m-0 w-100">
+        <nav class="container navbar navbar-expand-lg p-0">
+        <div class="logo-brand">
+            <a class="navbar-brand" href="index.html"><img class="img-fluid logo" src="./assets/img/logo-white.png" alt=""></a>
+        </div>
+        <div id="menuBar" class="menubar">
+            <i class="fa-solid fa-bars bar-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false"></i>
+        </div>
+        <div class="nav-links m-0 p-0 collapse navbar-collapse row row-reverse" id="navbarNav">
+            <ul class="m-0 navbar-nav text-center d-flex justify-content-end">
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="#variedad">Variedad</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="#tienda">Tienda</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item w-auto mx-3">
+                    <div id="navCart" class="nav-cart w-auto">
+                        <a class="nav-link m-0 p-0" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <span id="spanCart" class="span-cart">0</span>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+<!-- SHOPPING CART -->
+
+    <div id="shoppingModal" class="shopping-modal d-flex justify-content-center align-items-center p-3 m-0">
+        <!-- botón cerrar -->
+        <div id="shoppingCloseButton" class="shopping-close-button p-0">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="cart-container d-flex row justify-content-center align-items-center m-0 p-0 col-12 col-xl-10">
+
+            <!-- texto "vacío" -->
+            <div class="cart-item-container">
+                <h3 class="mt-5 text-center empty-text">Carrito vacío</h3>
+            </div>
+
+            <button id="comprar" class="comprar-button text-center w-auto mb-4">COMPRAR</button>
+
+            <!-- Precio total -->
+            <div class="cart-containter-total d-flex justify-content-between align-items-center">
+                <h6 id="borrarTodo" class="borrar-todo">Borrar todo</h6>
+                <h5 id="cartPriceTotal" class="text-end cart-price-text">TOTAL : 0 $</h5>
+
+            </div>
+        </div>
+    </div>
+
+<!-- BANNER -->
+
+    <section class="banner-section d-flex justify-content-start align-items-center m-0 p-0">
+        <div id="arrowBanner">
+            <i class="arrow-banner fa-solid fa-arrow-down"></i>
+        </div>
+        <div id="bannerText" class="banner-text">
+            <h1>Lucir el ahora</h1>
+        </div>
+        <div id="localTime" class="local-time">
+            <p>00:00:00</p>
+        </div>
+        <div class="container banner-description d-flex justify-content-center align-items-center">
+            <div>
+                <img id="clockBanner" class="clock-banner" src="./assets/img/clock-banner.png" alt="">
+            </div>
+        </div>
+    </section>
+
+<!-- IMÁGENES SQUARE -->
+
+    <section id="variedad" class="squares py-5 m-0 text-center">
+        <div class="container d-flex justify-content-center align-items-center">
+            <h2 class="text-center mb-5">VARIEDAD</h2>
+        </div>
+        <div class="d-flex row justify-content-center align-items-center m-0 p-0">
+            <div class="img-square col-12 col-sm-8 col-md-6 col-lg-4 p-0 m-0">
+                <!-- <img class="img-fluid" src="./assets/img/square1.jpg" alt=""> -->
+                <p class="m-0 p-0">ESTILOS</p>
+            </div>
+            <div class="img-square col-12 col-sm-8 col-md-6 col-lg-4 p-0 m-0">
+                <!-- <img class="img-fluid" src="./assets/img/square2.jpg" alt=""> -->
+                <p class="m-0 p-0">DISEÑOS</p>
+            </div>
+            <div class="img-square col-12 col-sm-8 col-md-6 col-lg-4 p-0 m-0">
+                <!-- <img class="img-fluid" src="./assets/img/square3.jpg" alt=""> -->
+                <p class="m-0 p-0">CALIDAD</p>
+            </div>
+        </div>
+    </section>
+
+<!-- TIENDA -->
+
+    <section id="tienda" class="tienda d-flex justify-content-center align-items-center">
+
+        <div id="tiendaContainer" class="container d-flex row justify-content-center align-items-center">
+            <div class="container d-flex justify-content-center align-items-center">
+                <h2 class="tienda-title text-center mb-5">TIENDA</h2>
+            </div>
+        </div>
+
+    </section>
+
+<!-- NOSOTROS -->
+
+    <section id="nosotros" class="nosotros d-flex justify-content-center align-items-center p-0 m-0">
+
+        <div class="container d-flex row justify-content-center align-items-center col-12">
+
+            <h2 class="mb-4 nosotros-title">NOSOTROS</h2>
+            <h2 class="text-center nosotros-title-two mb-4">NOSOTROS</h2>
+
+            <div id="nosotrosText" class="nosotros-text p-3">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. A veritatis cumque earum sed dicta ut animi et ipsum quaerat exercitationem tempora rerum, vero consectetur, fugiat error! Nemo illum molestiae voluptates pariatur, architecto mollitia itaque aperiam modi qui consectetur reprehenderit a laudantium aliquid aspernatur adipisci! Nihil quo ipsum voluptas iste labore natus tempore explicabo, consequuntur soluta architecto tempora iure animi autem aut eligendi eius velit laudantium porro consequatur distinctio nemo ipsa sequi omnis minus. Voluptatibus animi consectetur ipsa cum laudantium aspernatur dicta soluta sapiente quis facere excepturi perspiciatis quibusdam dolore minus molestias deserunt sit provident tempore, temporibus veritatis id tenetur. Asperiores?
+            </div>
+            <i class="text-center mt-5 fs-1 fa-solid fa-ellipsis"></i>
+
+        </div>
+
+    </section>
+
+<!-- SUBSCRIBE -->
+
+    <section class="subscribe w-auto d-flex row justify-content-center align-items-center m-0 p-0">
+        <div class="container row h-100 d-flex justify-content-between align-items-center">
+            <div class="d-flex row justify-content-center align-items-center col-12 col-md-6 my-4">
+                <img class="footer-logo" src="./assets/img/logo-white.png" alt="">
+            </div>
+            <div class="container p-3 d-flex justify-content-center align-items-center col-12 col-md-6 my-4">
+                <input type="text"><button>SUSCRÍBETE</button>
+            </div>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+
+    <footer id="contacto">
+        <div class="footer container row py-3 justify-content-between m-auto">
+        <div class="adress row text-start p-3 mb-4 col-12 col-xl-6">
+            <div>
+            <h4 class="mb-5 border-bottom pb-3">Contacto</h4>
+            </div>
+            <div class="">
+            <p class="m-0"><i class="fa-solid fa-phone adress-icon"></i>+123 555 654987</p>
+            <p class="m-0"><i class="fa-solid fa-envelope adress-icon"></i>timetravel@timeshift.com</p>
+            <p class="m-0"><i class="fa-solid fa-location-dot adress-icon"></i>Milano, ITALIA.</p>
+            </div>
+        </div>
+        <div class="footer-redes row p-3 col-12 col-xl-6"">
+            <div>
+            <h4 class="mb-5 border-bottom pb-3">Social</h4>
+            </div>
+            <div class="redes d-flex p-0 align-items-center justify-content-center">
+            <a href="#"><i class="fa-brands fa-github"></i><br></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a><br>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a><br>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a><br>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        </div>
+        <div class="container text-center m-auto">
+            <p class="icon-p p-4 m-0"><img class="icon-footer" src="./assets/img/favicon.png" alt=""> Sitio web realizado por Alfredo Pérez, 2022.</p>
+        </div>
+    </footer>
+
+<!-- SCRIPTS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4c1a11ecc8.js" crossorigin="anonymous"></script>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/banner.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="./js/modal_productos.js"></script>
+    <script src="./js/shoppingCart.js"></script>
+
+    
+</body>
+</html>

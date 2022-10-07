@@ -1,0 +1,44 @@
+@import "./_header";
+@import "./_shoppingCart";
+@import "./_banner";
+@import "./_queries";
+@import "./_section_square";
+@import "./_tienda";
+@import "./_modal_product_preview";
+@import "./_nosotros";
+@import "./_footer";
+
+// ESTILOS
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(26, 26, 26);
+}
+
+.subscribe{
+    background-color: rgb(26, 26, 26);
+    color: white;
+    p{
+        font-weight: 500;
+        font-size: 30px;
+        padding: 15px;
+        border-bottom: 4px solid white;
+        border-left: 4px solid white;
+    }
+    button{
+        background-color: #000000;
+        color: white;
+        border: none;
+        padding: 8px;
+    }
+    input{
+        padding: 6px;
+        border: none;
+        outline: none;
+    }
+}

@@ -1,0 +1,64 @@
+
+//PC
+
+@media screen and (min-width: 992px){
+
+    .menubar{
+        display: none;
+    }
+    .clock-banner{
+        height: 750px !important;
+    }
+    .shopping-modal{
+        height: 100vh;
+        width: 50%;
+        right: 0;
+    } 
+    .nosotros-title-two{
+        display: none;
+    }
+}
+
+
+
+// TABLETS
+
+@media screen and (max-width: 992px){
+
+    .header{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .banner-text{
+        display: none;
+    }
+    .clock-banner{
+        height: 400px !important;
+    }
+    .local-time{
+        display: none;
+    }
+    .nav-links{
+        margin-top: 40px !important;
+    }
+    .img-square{
+        p{
+            font-size: 30px !important;
+        }
+    }
+    .nosotros-title{
+        font-size: 60px !important;
+    }
+
+}
+
+// MOBILE
+
+@media screen and (max-width: 575px){
+    .shopping-modal{
+        padding: 10px !important;
+    }
+    .cart-product-img{
+        display: none !important;
+    }
+}

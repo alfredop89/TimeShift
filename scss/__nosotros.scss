@@ -1,0 +1,18 @@
+.nosotros{
+    position: relative;
+    height: 850px;
+    overflow: hidden;
+    .nosotros-text{
+        color: white;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 4px;
+    } 
+    .nosotros-title{
+        position: absolute;
+        color: rgba(255, 255, 255, 0.344);
+        font-size: 120px;
+        font-weight: 300;
+        left: 0 !important;
+        top: 0;
+    }
+}
