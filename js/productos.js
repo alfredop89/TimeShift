@@ -5,49 +5,57 @@ const arrayProducts = [
         id: "1",
         nombre: "Reloj clásico casual (plateado/bronze)",
         precio: 355,
-        imagen: "./assets/img/product_1.png"
+        imagen: "./assets/img/product_1.png",
+        cantidad: 1
     },
         {
         id: "2",
         nombre: "Reloj casual para hombres (dorado)",
         precio: 220,
-        imagen: "./assets/img/product_2.png"
+        imagen: "./assets/img/product_2.png",
+        cantidad: 1
     },
         {
         id: "3",
         nombre: "Reloj clásico casual para vestir (dorado)",
         precio: 185,
-        imagen: "./assets/img/product_3.png"
+        imagen: "./assets/img/product_3.png",
+        cantidad: 1
     },
         {
         id: "4",
         nombre: "Reloj clásico deportivo  para hombres",
         precio: 260,
-        imagen: "./assets/img/product_4.png"
+        imagen: "./assets/img/product_4.png",
+        cantidad: 1
     },
         {
         id: "5",
         nombre: "Reloj casual para hombres (nueva colección)",
         precio: 380,
-        imagen: "./assets/img/product_5.png"
+        imagen: "./assets/img/product_5.png",
+        cantidad: 1
     },
         {
         id: "6",
         nombre: "Reloj clásico casual para hombres (nueva colección)",
         precio: 140,
-        imagen: "./assets/img/product_6.png"
+        imagen: "./assets/img/product_6.png",
+        cantidad: 1
     },
         {
         id: "7",
         nombre: "Reloj clásico casual para hombres (contra agua)",
         precio: 170,
-        imagen: "./assets/img/product_7.png"
+        imagen: "./assets/img/product_7.png",
+        cantidad: 1
     },
         {
         id: "8",
         nombre: "Reloj deportivo para hombres (nueva colección)",
         precio: 330,
-        imagen: "./assets/img/product_8.png"
+        imagen: "./assets/img/product_8.png",
+        cantidad: 1
     }
 ]
 
@@ -81,6 +89,6 @@ arrayProducts.forEach((producto) => {
     `
     productContainer.appendChild(div)
 
-    let cardButton = document.getElementById(`${producto.id}`).onclick = () => {crearItem(producto.id), productoRepetido(producto.id)}
+    let cardButton = document.getElementById(`${producto.id}`).onclick = () => {crearItem(producto.id)}
 
 })

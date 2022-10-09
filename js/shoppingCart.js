@@ -41,13 +41,32 @@ function carritoVacío(){
 let crearItem = (id) =>{
 
     let item = arrayProducts.find((producto) => id === producto.id)
-    shoppingCart.push(item)
+    
+    // PRODUCTOS REPETIDOS EN EL CARRITO
+
+    let repeat = shoppingCart.some((producto) => id === producto.id)
+    if (repeat){
+        shoppingCart.map((prod) =>{
+            if(id === prod.id){
+                return prod.cantidad++
+            }
+        })
+    }
+    else{
+        shoppingCart.push(item)
+    }
+
+
+
+    shoppingCart.map((prod) =>console.log(prod.precio * prod.cantidad))
     spanCart.innerText = shoppingCart.length
+
     console.log(shoppingCart)
     shoppingCartUpdate()
     anadirAlCarrito()
     botonComprar()
     precioTotal()
+
 }
 
 // PRODUCTO EN EL CARRITO DE COMPRAS
@@ -71,7 +90,7 @@ function anadirAlCarrito() {
     
             <div class="d-flex justify-content-center align-items-center">
                 <div class="cart-product-quantity d-flex justify-content-center align-items-center">
-                    <p class="m-0">Cant : 0</p>
+                    <p class="m-0 cantidad">Cant : ${producto.cantidad}</p>
                 </div>
                 <div class="p-2 text-center">
                     <i id="${producto.id}" class="text-end cart-close-product fa-solid fa-xmark"></i>
@@ -86,12 +105,12 @@ function anadirAlCarrito() {
 
     })
 
-
 }
 
 // ACTUALIZANDO EL CARRITO
 
 function shoppingCartUpdate() {
+
     cartContainer.innerHTML = ``
 }
 
@@ -103,7 +122,6 @@ let eliminarProducto =(id) => {
     let buscarProducto = shoppingCart.find((producto) => id === producto.id)
     console.log(buscarProducto)
     shoppingCart =  shoppingCart.filter((producto) => { return producto !== buscarProducto})
-
     shoppingCartUpdate()
     anadirAlCarrito()
     botonComprar()
@@ -123,6 +141,7 @@ vaciarCarrito.onclick = () => {
     `
     spanCart.innerText = shoppingCart.length
     console.log(shoppingCart)
+    precioTotal()
     botonComprar()
 }
 
@@ -142,18 +161,15 @@ function botonComprar() {
 
 function precioTotal() {
 
-    let totalCompra = shoppingCart.reduce((acc, prod) => acc + prod.precio, 0)
+
+    let totalCompra = shoppingCart.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0)
     let cartPriceTotal = document.getElementById('cartPriceTotal').innerText = 'Total a pagar:  ' + '   ' + totalCompra + '$'
     
 }
 
-// CANTIDAD DE PRODUCTOS EN EL CARRITO
 
-let productoRepetido = (id) => {
 
-    let buscarRepetido = shoppingCart.some((producto) => id === producto.id)
-    console.log(buscarRepetido) 
-}
+
 
 
 
