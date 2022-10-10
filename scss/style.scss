@@ -42,3 +42,30 @@ body{
         outline: none;
     }
 }
+
+.shopping-added{
+    position: fixed;
+    width: auto;
+    bottom: 0;
+    background-color: #0A369D;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+    z-index: 100;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    animation: visible 2s;
+}
+.shopping-added-visible{
+    opacity: 1;
+    visibility: visible;
+}
+@keyframes visible {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

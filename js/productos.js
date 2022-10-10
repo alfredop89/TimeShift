@@ -89,6 +89,16 @@ arrayProducts.forEach((producto) => {
     `
     productContainer.appendChild(div)
 
-    let cardButton = document.getElementById(`${producto.id}`).onclick = () => {crearItem(producto.id)}
+    let cardButton = document.getElementById(`${producto.id}`).onclick = () => {
+        
+        let added = document.querySelector('.shopping-added')
+        setTimeout(() => {
+            added.classList.add('shopping-added-visible')
+        }, 100)
+        setTimeout(() => {
+            added.classList.remove('shopping-added-visible')
+        }, 3000)
+        crearItem(producto.id)
+    }
 
 })
