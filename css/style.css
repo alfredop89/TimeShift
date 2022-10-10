@@ -517,19 +517,11 @@ body {
   transition: 0.3s;
   opacity: 0;
   visibility: hidden;
-  animation: visible 2s;
 }
 
 .shopping-added-visible {
   opacity: 1;
   visibility: visible;
-}
-
-@keyframes visible {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
