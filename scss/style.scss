@@ -19,34 +19,11 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(26, 26, 26);
 }
-
-.subscribe{
-    background-color: rgb(26, 26, 26);
-    color: white;
-    p{
-        font-weight: 500;
-        font-size: 30px;
-        padding: 15px;
-        border-bottom: 4px solid white;
-        border-left: 4px solid white;
-    }
-    button{
-        background-color: #000000;
-        color: white;
-        border: none;
-        padding: 8px;
-    }
-    input{
-        padding: 6px;
-        border: none;
-        outline: none;
-    }
-}
-
 .shopping-added{
     position: fixed;
     width: auto;
     bottom: 0;
+    right: 0;
     background-color: #0A369D;
     color: white;
     font-size: 1.2em;
@@ -57,6 +34,7 @@ body{
     transition: 0.3s;
     opacity: 0;
     visibility: hidden;
+    box-shadow: 10px 5px 35px rgba(0, 0, 0, 0.363);
 }
 .shopping-added-visible{
     opacity: 1;

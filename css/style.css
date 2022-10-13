@@ -120,6 +120,58 @@ header .span-cart {
   color: red;
 }
 
+.modal-compra {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.993);
+  transition: 0.5s;
+  transform: translateY(-3000px);
+}
+.modal-compra .modal-comprar-close {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 25px;
+  cursor: pointer;
+}
+.modal-compra .modal-form {
+  background-color: white;
+  border-radius: 8px;
+}
+.modal-compra #modalNombre {
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.087);
+  outline: none;
+}
+.modal-compra #modalApellido {
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.087);
+  outline: none;
+}
+.modal-compra #modalCorreo {
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.087);
+  outline: none;
+}
+.modal-compra #modalTdc {
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.087);
+  outline: none;
+}
+.modal-compra .modal-comprar-button {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+}
+
 .banner-section {
   position: relative;
   height: 100vh;
@@ -225,6 +277,9 @@ header .span-cart {
   .nosotros-title {
     font-size: 60px !important;
   }
+  .modal-comprar-close {
+    margin: 5px;
+  }
 }
 @media screen and (max-width: 575px) {
   .shopping-modal {
@@ -232,6 +287,24 @@ header .span-cart {
   }
   .cart-product-img {
     display: none !important;
+  }
+  .cart-product-name {
+    font-size: 0.9em;
+  }
+  .shopping-added {
+    position: fixed;
+    width: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .modal-compra {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .modal-comprar-close {
+    margin: 15px !important;
   }
 }
 .squares {
@@ -480,33 +553,11 @@ body {
   background-color: rgb(26, 26, 26);
 }
 
-.subscribe {
-  background-color: rgb(26, 26, 26);
-  color: white;
-}
-.subscribe p {
-  font-weight: 500;
-  font-size: 30px;
-  padding: 15px;
-  border-bottom: 4px solid white;
-  border-left: 4px solid white;
-}
-.subscribe button {
-  background-color: #000000;
-  color: white;
-  border: none;
-  padding: 8px;
-}
-.subscribe input {
-  padding: 6px;
-  border: none;
-  outline: none;
-}
-
 .shopping-added {
   position: fixed;
   width: auto;
   bottom: 0;
+  right: 0;
   background-color: #0A369D;
   color: white;
   font-size: 1.2em;
@@ -517,6 +568,7 @@ body {
   transition: 0.3s;
   opacity: 0;
   visibility: hidden;
+  box-shadow: 10px 5px 35px rgba(0, 0, 0, 0.363);
 }
 
 .shopping-added-visible {

@@ -97,7 +97,7 @@ arrayProducts.forEach((producto) => {
         }, 100)
         setTimeout(() => {
             added.classList.remove('shopping-added-visible')
-        }, 3000)
+        }, 1200)
         crearItem(producto.id)
     }
 

@@ -49,6 +49,9 @@
     .nosotros-title{
         font-size: 60px !important;
     }
+    .modal-comprar-close{
+        margin: 05px;
+    }
 
 }
 
@@ -60,5 +63,23 @@
     }
     .cart-product-img{
         display: none !important;
+    }
+    .cart-product-name{
+        font-size: 0.9em;
+    }
+    .shopping-added{
+        position: fixed;
+        width: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .modal-compra{
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    .modal-comprar-close{
+        margin: 15px !important;
     }
 }
